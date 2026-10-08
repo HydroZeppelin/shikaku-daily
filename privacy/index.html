@@ -42,9 +42,13 @@ server so that your time can appear on that day's leaderboard:</p>
 
 <table>
 <tr><th>What</th><th>Details</th></tr>
-<tr><td>A player ID</td><td>If you have not signed in, this is a random ID created on your device.
-It is not linked to your name, email address or any other account. If you have signed in to
-Google Play Games, it is your Play Games player ID.</td></tr>
+<tr><td>A player ID</td><td>If you have not signed in, this is an ID worked out on your device
+from the identifier Android gives each app on each device. It is scrambled before it leaves your
+phone, so the game's server never receives the Android identifier itself, and it cannot be matched
+with any other app. It stays the same if you reinstall the game, which is what stops one person
+appearing on a leaderboard several times. It is not linked to your name, email address or any
+account. If you have signed in to Google Play Games, your Play Games player ID is used
+instead.</td></tr>
 <tr><td>A display name</td><td>If you have not signed in, a name made up by the game (such as
 "BraveSquare56"). If you have signed in, your Play Games gamer name. A supporter's chosen pet is
 sent with the name so that it can be shown beside it.</td></tr>
@@ -52,8 +56,8 @@ sent with the name so that it can be shown beside it.</td></tr>
 </table>
 
 <p>Your display name and times are shown to other players on the leaderboards. Nothing else about
-you is shown, and the server does not receive your email address, real name, location, contacts
-or device identifiers.</p>
+you is shown, and the server does not receive your email address, real name, location, contacts,
+advertising ID or any device identifier other than the scrambled player ID described above.</p>
 
 <p>When the game shows you a leaderboard, it sends your player ID so the server can find your
 place on the board. Fetching the day's puzzles sends nothing about you.</p>
