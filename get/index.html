@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shikaku Daily</title>
+<meta name="description" content="Three fresh Shikaku logic puzzles every day. Box in every number.">
+<meta property="og:title" content="Shikaku Daily">
+<meta property="og:description" content="Three fresh Shikaku logic puzzles every day. Box in every number.">
+<meta property="og:type" content="website">
+<style>
+  body { font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6;
+         max-width: 30rem; margin: 0 auto; padding: 3rem 1rem 4rem; background: #1C2230; color: #D9DDE2;
+         text-align: center; }
+  h1 { color: #F3D56B; margin-bottom: 0.25rem; }
+  p { margin: 0.5rem 0 1.5rem; }
+  a.store { display: block; margin: 0.75rem auto; padding: 0.9rem 1rem; max-width: 18rem; border-radius: 0.75rem;
+            background: #5A8FA6; color: #1C2230; font-weight: 600; text-decoration: none; }
+  .soon { color: #8E95A3; font-size: 0.95rem; }
+</style>
+<script>
+  // Where the game is to be had, by the phone that asks: an Android phone goes straight to Google
+  // Play. An iPhone is told the game is coming (there is no App Store page yet - put its address
+  // in APP_STORE when there is, and iPhones go straight there too). Anything else sees both.
+  var PLAY = "https://play.google.com/store/apps/details?id=io.github.puzzle.game";
+  var APP_STORE = "";
+  var ua = navigator.userAgent || "";
+  var iPhone = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+  if (/Android/.test(ua)) {
+    location.replace(PLAY);
+  } else if (iPhone && APP_STORE) {
+    location.replace(APP_STORE);
+  }
+</script>
+</head>
+<body>
+<h1>Shikaku Daily</h1>
+<p>Three fresh Shikaku puzzles every day. Box in every number.</p>
+<a class="store" href="https://play.google.com/store/apps/details?id=io.github.puzzle.game">Get it on Google Play</a>
+<p class="soon" id="ios">Coming soon to iPhone.</p>
+</body>
+</html>
